@@ -55,11 +55,7 @@ const AddPostForm = ({ open, handleClose }) => {
   };
 
   const onSubmit = (data) => {
-    console.log(data, file);
-    // Dispatch create post action
     dispatch(createPost({ ...data, image: file }));
-    // Yeni Post İşlem Akışı:
-    // 1- İlk adımda datamız createPost'a gidiyor(actions)
     clearForm();
   };
 

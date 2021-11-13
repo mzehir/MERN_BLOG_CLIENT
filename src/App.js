@@ -21,6 +21,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import PenIcon from "@material-ui/icons/Create";
+import PostDetails from "./components/PostDetails";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -89,6 +90,7 @@ const App = () => {
             <Router>
               <Switch>
                 <Route exact path="/posts" component={PostsList} />
+                <Route exact path="/posts/:id" component={PostDetails} />
               </Switch>
               <Redirect from="/" to="/posts"></Redirect>
             </Router>
